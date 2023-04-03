@@ -41,7 +41,9 @@ export default function Home() {
           }}
         />
 
-        <NavbarMenu visible={visible} close={() => setVisible(false)} />
+        {!mediumScreen && (
+          <NavbarMenu visible={visible} close={() => setVisible(false)} />
+        )}
 
         <Banner1 />
 

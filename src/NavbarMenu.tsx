@@ -20,6 +20,7 @@ export default function NavbarMenu({ visible, close }: NavbarMenuProps) {
         backgroundColor: '#EAE9E7',
         zIndex: 1,
         marginTop: 70,
+        flex: 1,
       }}
     >
       <div style={{ position: 'absolute', right: 20, top: 20 }} onClick={close}>
