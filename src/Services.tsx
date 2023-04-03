@@ -16,7 +16,7 @@ export default function Services() {
       }}
     >
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'1'}
         iconAlt='icon'
         price={'30.00'}
         type={'Haircut'}
@@ -24,7 +24,7 @@ export default function Services() {
         description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'2'}
         iconAlt='icon'
         price={'40.00'}
         type={'Haircut & Beard'}
@@ -32,7 +32,7 @@ export default function Services() {
         description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'3'}
         iconAlt='icon'
         price={'20.00'}
         type={'Line-Up/Just beard'}
@@ -40,7 +40,7 @@ export default function Services() {
         description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'4'}
         iconAlt='icon'
         price={'25.00'}
         type={'Haircut'}
@@ -49,7 +49,7 @@ export default function Services() {
         note='* Kids up to 12 years old.'
       />
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'5'}
         iconAlt='icon'
         price={'25.00'}
         type={'Haircut'}
@@ -57,7 +57,7 @@ export default function Services() {
         description='Above 60 years old'
       />
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'6'}
         iconAlt='icon'
         price={'5.00'}
         type={'Eyebrow Wax'}
@@ -65,7 +65,7 @@ export default function Services() {
         description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'7'}
         iconAlt='icon'
         price={'5.00'}
         type={'Cheeks Wax'}
@@ -73,7 +73,7 @@ export default function Services() {
         description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
       <Service
-        icon={'/images/Group_77.png'}
+        icon={'8'}
         iconAlt='icon'
         price={'5.00'}
         type={'Nose/Ears Wax'}

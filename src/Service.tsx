@@ -1,4 +1,14 @@
 import React from 'react';
+import {
+  Logo1,
+  Logo2,
+  Logo3,
+  Logo4,
+  Logo5,
+  Logo6,
+  Logo7,
+  Logo8,
+} from './Logos';
 
 interface ServiceProps {
   icon: string;
@@ -8,6 +18,29 @@ interface ServiceProps {
   ageRange: string;
   description?: string;
   note?: string;
+}
+
+function Icon({ icon }: { icon: string }) {
+  switch (icon) {
+    case '1':
+      return <Logo1 />;
+    case '2':
+      return <Logo2 />;
+    case '3':
+      return <Logo3 />;
+    case '4':
+      return <Logo4 />;
+    case '5':
+      return <Logo5 />;
+    case '6':
+      return <Logo6 />;
+    case '7':
+      return <Logo7 />;
+    case '8':
+      return <Logo8 />;
+    default:
+      return null;
+  }
 }
 
 export default function Service({
@@ -34,15 +67,9 @@ export default function Service({
         margin: 20,
       }}
     >
-      <img
-        src={icon}
-        alt={iconAlt}
-        style={{
-          width: 40,
-          height: 50,
-          marginTop: 30,
-        }}
-      />
+      <div style={{ marginTop: 30, width: 40, height: 50 }}>
+        <Icon icon={icon} />
+      </div>
       <div
         style={{
           width: 112,
