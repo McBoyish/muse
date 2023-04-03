@@ -19,65 +19,66 @@ export default function Services() {
         icon={'/images/Group_77.png'}
         iconAlt='icon'
         price={'30.00'}
-        type={'HAIRCUT'}
+        type={'Haircut'}
         ageRange='Adult'
+        description='Lorem ipsum dolor sit amet, ipiscing elit'
+      />
+      <Service
+        icon={'/images/Group_77.png'}
+        iconAlt='icon'
+        price={'40.00'}
+        type={'Haircut & Beard'}
+        ageRange='Adult'
+        description='Lorem ipsum dolor sit amet, ipiscing elit'
+      />
+      <Service
+        icon={'/images/Group_77.png'}
+        iconAlt='icon'
+        price={'20.00'}
+        type={'Line-Up/Just beard'}
+        ageRange='Adult'
+        description='Lorem ipsum dolor sit amet, ipiscing elit'
+      />
+      <Service
+        icon={'/images/Group_77.png'}
+        iconAlt='icon'
+        price={'25.00'}
+        type={'Haircut'}
+        ageRange='Kids'
+        description='No skin-fade under 14 years old.'
+        note='* Kids up to 12 years old.'
+      />
+      <Service
+        icon={'/images/Group_77.png'}
+        iconAlt='icon'
+        price={'25.00'}
+        type={'Haircut'}
+        ageRange='Senior'
         description='Above 60 years old'
       />
       <Service
         icon={'/images/Group_77.png'}
         iconAlt='icon'
-        price={'30.00'}
-        type={'HAIRCUT'}
+        price={'5.00'}
+        type={'Eyebrow Wax'}
         ageRange='Adult'
-        description='Above 60 years old'
+        description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
       <Service
         icon={'/images/Group_77.png'}
         iconAlt='icon'
-        price={'30.00'}
-        type={'HAIRCUT'}
+        price={'5.00'}
+        type={'Cheeks Wax'}
         ageRange='Adult'
-        description='Above 60 years old'
+        description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
       <Service
         icon={'/images/Group_77.png'}
         iconAlt='icon'
-        price={'30.00'}
-        type={'HAIRCUT'}
+        price={'5.00'}
+        type={'Nose/Ears Wax'}
         ageRange='Adult'
-        description='Above 60 years old'
-      />
-      <Service
-        icon={'/images/Group_77.png'}
-        iconAlt='icon'
-        price={'30.00'}
-        type={'HAIRCUT'}
-        ageRange='Adult'
-        description='Above 60 years old'
-      />
-      <Service
-        icon={'/images/Group_77.png'}
-        iconAlt='icon'
-        price={'30.00'}
-        type={'HAIRCUT'}
-        ageRange='Adult'
-        description='Above 60 years old'
-      />
-      <Service
-        icon={'/images/Group_77.png'}
-        iconAlt='icon'
-        price={'30.00'}
-        type={'HAIRCUT'}
-        ageRange='Adult'
-        description='Above 60 years old'
-      />
-      <Service
-        icon={'/images/Group_77.png'}
-        iconAlt='icon'
-        price={'30.00'}
-        type={'HAIRCUT'}
-        ageRange='Adult'
-        description='Above 60 years old'
+        description='Lorem ipsum dolor sit amet, ipiscing elit'
       />
     </div>
   );

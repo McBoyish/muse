@@ -18,6 +18,7 @@ export default function Banner1() {
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
+        marginTop: 70,
       }}
     >
       <img

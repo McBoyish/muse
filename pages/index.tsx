@@ -244,60 +244,6 @@ export default function Home() {
                 </text>
               </div>
             </div>
-
-            <div
-              style={{
-                flexDirection: 'column',
-                display: 'flex',
-                marginTop: mediumScreen ? 0 : 50,
-                alignSelf: 'flex-start',
-                marginLeft: mediumScreen ? 50 : 0,
-              }}
-            >
-              <text
-                style={{
-                  fontSize: 14,
-                  fontWeight: 'bold',
-                  fontFamily: 'Miller Display',
-                  textAlign: 'left',
-                }}
-              >
-                RESOURCES
-              </text>
-              <div
-                style={{
-                  textAlign: 'left',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                <text
-                  style={{ fontSize: 13, fontFamily: 'Poppins', marginTop: 20 }}
-                >
-                  Instagram
-                </text>
-                <text
-                  style={{ fontSize: 13, fontFamily: 'Poppins', marginTop: 10 }}
-                >
-                  Tiktok
-                </text>
-                <text
-                  style={{ fontSize: 13, fontFamily: 'Poppins', marginTop: 10 }}
-                >
-                  Videos
-                </text>
-                <text
-                  style={{ fontSize: 13, fontFamily: 'Poppins', marginTop: 10 }}
-                >
-                  FAQ
-                </text>
-                <text
-                  style={{ fontSize: 13, fontFamily: 'Poppins', marginTop: 10 }}
-                >
-                  Careers
-                </text>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -305,15 +251,14 @@ export default function Home() {
         <div
           style={{
             backgroundColor: 'black',
-            height: 80,
             display: 'flex',
             flexDirection: mediumScreen ? 'row' : 'column-reverse',
             alignItems: 'center',
             justifyContent: 'space-between',
-            paddingTop: mediumScreen ? 0 : 50,
-            paddingBottom: mediumScreen ? 0 : 50,
-            paddingLeft: 50,
-            paddingRight: 50,
+            paddingLeft: 25,
+            paddingRight: 25,
+            paddingTop: mediumScreen ? 25 : 0,
+            paddingBottom: 25,
             textAlign: mediumScreen ? 'left' : 'center',
           }}
         >
@@ -327,28 +272,6 @@ export default function Home() {
           >
             © 2023. Muse Barbershop. All Rights Reserved.
           </text>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-            }}
-          >
-            <text
-              style={{ fontSize: 13, fontFamily: 'Poppins', color: '#AF0202' }}
-            >
-              Privacy Policy
-            </text>
-            <text
-              style={{
-                fontSize: 13,
-                fontFamily: 'Poppins',
-                color: '#AF0202',
-                marginLeft: 50,
-              }}
-            >
-              Terms of Service
-            </text>
-          </div>
         </div>
       </div>
     </>

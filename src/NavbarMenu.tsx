@@ -16,8 +16,10 @@ export default function NavbarMenu({ visible, close }: NavbarMenuProps) {
         width: '100%',
         alignItems: 'center',
         paddingBottom: 50,
-        position: 'relative',
+        position: 'fixed',
         backgroundColor: '#EAE9E7',
+        zIndex: 1,
+        marginTop: 70,
       }}
     >
       <div style={{ position: 'absolute', right: 20, top: 20 }} onClick={close}>
@@ -32,6 +34,7 @@ export default function NavbarMenu({ visible, close }: NavbarMenuProps) {
           fontFamily: 'Miller Display',
           fontWeight: 'bold',
           marginTop: 75,
+          color: 'black',
         }}
       >
         ABOUT
@@ -45,6 +48,7 @@ export default function NavbarMenu({ visible, close }: NavbarMenuProps) {
           fontFamily: 'Miller Display',
           fontWeight: 'bold',
           marginTop: 75,
+          color: 'black',
         }}
       >
         CONTACT
@@ -58,6 +62,7 @@ export default function NavbarMenu({ visible, close }: NavbarMenuProps) {
           fontFamily: 'Miller Display',
           fontWeight: 'bold',
           marginTop: 75,
+          color: 'black',
         }}
       >
         SERVICES
@@ -71,6 +76,7 @@ export default function NavbarMenu({ visible, close }: NavbarMenuProps) {
           fontFamily: 'Miller Display',
           fontWeight: 'bold',
           marginTop: 75,
+          color: 'black',
         }}
       >
         CAREER

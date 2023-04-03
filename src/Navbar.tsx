@@ -34,7 +34,20 @@ export default function Navbar({ openMenu }: NavbarProps) {
           </a>
         </div>
       )}
-      <div>
+      <div
+        style={
+          mediumScreen
+            ? {
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                width: 100,
+              }
+            : { marginLeft: 20 }
+        }
+      >
         <svg
           id='Logo'
           xmlns='http://www.w3.org/2000/svg'
@@ -118,7 +131,7 @@ export default function Navbar({ openMenu }: NavbarProps) {
       )}
 
       {!mediumScreen && (
-        <div onClick={openMenu}>
+        <div onClick={openMenu} style={{ marginRight: 20 }}>
           <NavbarMenu />
         </div>
       )}

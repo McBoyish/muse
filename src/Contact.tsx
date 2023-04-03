@@ -2,12 +2,17 @@ import { useEffect, useState } from 'react';
 import useBreakPoints from './utils/responsive';
 
 export default function Contact() {
-  const { isMediumScreen } = useBreakPoints();
+  const { isMediumScreen, isLargeScreen } = useBreakPoints();
   const [mediumScreen, setMediumScreen] = useState(true);
+  const [largeScreen, setLargeScreen] = useState(false);
 
   useEffect(() => {
     setMediumScreen(isMediumScreen);
-  });
+  }, [isMediumScreen]);
+
+  useEffect(() => {
+    setLargeScreen(isLargeScreen);
+  }, [isLargeScreen]);
 
   return (
     <>
@@ -18,7 +23,7 @@ export default function Contact() {
           flexDirection: mediumScreen ? 'row' : 'column-reverse',
           boxShadow:
             '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           marginLeft: mediumScreen ? 50 : 0,
           marginRight: mediumScreen ? 50 : 0,
           marginBottom: mediumScreen ? 50 : 0,
@@ -82,6 +87,7 @@ export default function Contact() {
           >
             {'muse.brossard@gmail.com'}
           </text>
+
           <div
             style={{
               display: 'flex',
@@ -92,14 +98,16 @@ export default function Contact() {
             <div
               style={{
                 display: 'flex',
-                flexDirection: mediumScreen ? 'row' : 'column',
+                flexDirection: largeScreen ? 'row' : 'column',
+                backgroundColor: 'red',
               }}
             >
               <input
                 type='text'
                 placeholder='Name'
                 style={{
-                  width: mediumScreen ? 195 : 200,
+                  flex: 1,
+                  width: largeScreen ? '47.5%' : undefined,
                   height: 20,
                   backgroundColor: '#EAE9E7',
                   borderRadius: 5,
@@ -109,12 +117,13 @@ export default function Contact() {
                   fontFamily: 'Poppins',
                 }}
               />
-              <div style={{ width: 10 }} />
+              <div style={{ width: '5%' }} />
               <input
                 type='email'
                 placeholder='Email address'
                 style={{
-                  width: mediumScreen ? 195 : 200,
+                  flex: 1,
+                  width: largeScreen ? '47.5%' : undefined,
                   height: 20,
                   backgroundColor: '#EAE9E7',
                   borderRadius: 5,
@@ -122,28 +131,30 @@ export default function Contact() {
                   borderWidth: 0,
                   fontSize: 16,
                   fontFamily: 'Poppins',
-                  marginTop: mediumScreen ? 0 : 15,
+                  marginTop: largeScreen ? 0 : 15,
                 }}
               />
             </div>
-            <textarea
-              placeholder='Write your message here'
-              rows={4}
-              style={{
-                width: mediumScreen ? 420 : 200,
-                backgroundColor: '#EAE9E7',
-                borderRadius: 5,
-                padding: 10,
-                borderWidth: 0,
-                fontSize: 16,
-                fontFamily: 'Poppins',
-                marginTop: 15,
-              }}
-            />
+            <div style={{ width: '100%', display: 'flex' }}>
+              <textarea
+                placeholder='Write your message here'
+                rows={4}
+                style={{
+                  flex: 1,
+                  backgroundColor: '#EAE9E7',
+                  borderRadius: 5,
+                  padding: 10,
+                  borderWidth: 0,
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
+                  marginTop: 15,
+                }}
+              />
+            </div>
           </div>
           <button
             style={{
-              width: mediumScreen ? 235 : 220,
+              width: largeScreen ? 235 : undefined,
               height: 50,
               borderRadius: 24,
               backgroundColor: '#AF0202',
@@ -157,14 +168,16 @@ export default function Contact() {
             Send
           </button>
         </div>
-        <img
-          src='/images/Mask_Group_14.png'
-          style={{
-            objectFit: 'cover',
-            width: mediumScreen ? '100%' : 300,
-            height: mediumScreen ? '100%' : 300,
-          }}
-        />
+        <div style={{ alignSelf: 'center' }}>
+          <img
+            src='/images/Mask_Group_14.png'
+            style={{
+              objectFit: 'cover',
+              width: mediumScreen ? '100%' : 300,
+              height: mediumScreen ? 500 : 300,
+            }}
+          />
+        </div>
       </div>
       <div
         style={{
@@ -205,7 +218,7 @@ export default function Contact() {
               alignSelf: 'flex-start',
             }}
           >
-            Tuesday - Wenesday
+            Tuesday - Wednesday
           </text>
           {mediumScreen && (
             <text>

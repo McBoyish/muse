@@ -25,16 +25,18 @@ export default function Slideshow() {
     setLargeScreen(isLargeScreen);
   }, [isLargeScreen]);
 
+  const size = mediumScreen ? 350 : 300;
+
   return (
     <div
       style={{
-        width: largeScreen ? 1000 : mediumScreen ? 700 : 500,
+        width: largeScreen ? 1000 : mediumScreen ? 700 : 300,
         alignSelf: 'center',
         marginTop: 100,
       }}
     >
       <Carousel
-        centerMode={true}
+        centerMode={mediumScreen}
         centerSlidePercentage={largeScreen ? 50 : mediumScreen ? 75 : 95}
         showStatus={false}
         showThumbs={false}
@@ -44,10 +46,10 @@ export default function Slideshow() {
       >
         {images.map((image) => (
           <div
-            style={{ width: 375, height: 375, alignSelf: 'center' }}
+            style={{ width: size, height: size, alignSelf: 'center' }}
             key={image}
           >
-            <img src={image} width={375} height={375} />
+            <img src={image} width={size} height={size} />
           </div>
         ))}
       </Carousel>

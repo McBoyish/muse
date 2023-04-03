@@ -7,6 +7,7 @@ interface ServiceProps {
   type: string;
   ageRange: string;
   description?: string;
+  note?: string;
 }
 
 export default function Service({
@@ -16,6 +17,7 @@ export default function Service({
   type,
   ageRange,
   description,
+  note,
 }: ServiceProps) {
   return (
     <div
@@ -118,6 +120,19 @@ export default function Service({
         >
           {description}
         </text>
+        {note && (
+          <text
+            style={{
+              alignSelf: 'center',
+              textAlign: 'center',
+              fontSize: 10,
+              fontFamily: 'Poppins',
+              color: '#AF0202',
+            }}
+          >
+            {note}
+          </text>
+        )}
         <div
           style={{
             width: 190,
