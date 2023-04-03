@@ -310,7 +310,8 @@ export default function Home() {
             flexDirection: mediumScreen ? 'row' : 'column-reverse',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: mediumScreen ? 0 : 50,
+            paddingTop: mediumScreen ? 0 : 50,
+            paddingBottom: mediumScreen ? 0 : 50,
             paddingLeft: 50,
             paddingRight: 50,
           }}
