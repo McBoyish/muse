@@ -43,7 +43,10 @@ export default function Slideshow() {
         infiniteLoop
       >
         {images.map((image) => (
-          <div style={{ width: 375, height: 375, alignSelf: 'center' }}>
+          <div
+            style={{ width: 375, height: 375, alignSelf: 'center' }}
+            key={image}
+          >
             <img src={image} width={375} height={375} />
           </div>
         ))}
