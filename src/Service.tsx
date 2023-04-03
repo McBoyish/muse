@@ -67,7 +67,16 @@ export default function Service({
         margin: 20,
       }}
     >
-      <div style={{ marginTop: 30, width: 40, height: 50 }}>
+      <div
+        style={{
+          marginTop: 30,
+          width: 40,
+          height: 50,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        }}
+      >
         <Icon icon={icon} />
       </div>
       <div
