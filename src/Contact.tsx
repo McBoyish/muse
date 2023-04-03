@@ -229,7 +229,7 @@ export default function Contact() {
               fontSize: 18,
               fontFamily: 'Miller Display',
               color: 'black',
-              alignSelf: 'flex-start',
+              alignSelf: mediumScreen ? 'flex-start' : 'center',
             }}
           >
             11:00 am - 7:00 pm
@@ -264,7 +264,7 @@ export default function Contact() {
               fontSize: 18,
               fontFamily: 'Miller Display',
               color: 'black',
-              alignSelf: 'flex-start',
+              alignSelf: mediumScreen ? 'flex-start' : 'center',
             }}
           >
             11:00 am - 8:00 pm
@@ -299,7 +299,7 @@ export default function Contact() {
               fontSize: 18,
               fontFamily: 'Miller Display',
               color: 'black',
-              alignSelf: 'flex-start',
+              alignSelf: mediumScreen ? 'flex-start' : 'center',
             }}
           >
             10:00 am - 6:00 pm
