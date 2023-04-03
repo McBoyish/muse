@@ -65,6 +65,7 @@ export default function Careers() {
             borderWidth: 0,
             color: 'white',
             marginTop: 35,
+            cursor: 'pointer',
           }}
         >
           Send

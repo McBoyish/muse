@@ -162,6 +162,7 @@ export default function Contact() {
               borderWidth: 0,
               color: 'white',
               marginTop: 15,
+              cursor: 'pointer',
             }}
           >
             Send
