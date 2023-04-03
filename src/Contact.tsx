@@ -99,7 +99,6 @@ export default function Contact() {
               style={{
                 display: 'flex',
                 flexDirection: largeScreen ? 'row' : 'column',
-                backgroundColor: 'red',
               }}
             >
               <input
