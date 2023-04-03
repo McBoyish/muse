@@ -1,0 +1,18 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+}
+
+.banner-text {
+  font-size: 68px;
+  color: white;
+}

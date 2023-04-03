@@ -1,0 +1,37 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-left-anchor {
+  text-decoration: none;
+  margin-right: 30px;
+  color: black;
+}
+
+.nav-right-book-now-container {
+  height: 35px;
+  width: 140px;
+  background-color: #af0202;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right-book-now {
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+}

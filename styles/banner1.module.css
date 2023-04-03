@@ -1,0 +1,40 @@
+.banner-container {
+  position: relative;
+  height: 550px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 550px;
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+  left: 150px;
+  top: 15%;
+  width: 664px;
+}
+
+.banner-text {
+  font-size: 68px;
+  color: white;
+  width: 664px;
+}
+
+.banner-learn-more-container {
+  height: 40px;
+  width: 185px;
+  background-color: #af0202;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.banner-learn-more {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
