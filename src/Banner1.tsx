@@ -26,6 +26,7 @@ export default function Banner1() {
           width: '100%',
           height: 600,
           position: 'relative',
+          objectFit: 'cover',
         }}
       />
       <div
@@ -42,7 +43,7 @@ export default function Banner1() {
       >
         <text
           style={{
-            fontSize: 68,
+            fontSize: 60,
             color: 'white',
             width: mediumScreen ? 665 : 350,
           }}

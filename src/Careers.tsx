@@ -26,8 +26,8 @@ export default function Careers() {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          width: 500,
-          paddingRight: 25,
+          width: mediumScreen ? 500 : 300,
+          paddingRight: mediumScreen ? 25 : 0,
           textAlign: mediumScreen ? 'left' : 'center',
           alignItems: mediumScreen ? 'flex-start' : 'center',
         }}
@@ -71,7 +71,14 @@ export default function Careers() {
         </button>
       </div>
       <div style={{ marginBottom: mediumScreen ? 0 : 50 }}>
-        <img src={'/images/Mask_Group_20.png'} />
+        <img
+          src={'/images/Mask_Group_20.png'}
+          style={{
+            objectFit: 'cover',
+            width: mediumScreen ? '100%' : 300,
+            height: mediumScreen ? '100%' : 300,
+          }}
+        />
       </div>
     </div>
   );

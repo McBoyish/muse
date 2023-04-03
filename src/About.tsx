@@ -52,7 +52,14 @@ export default function About() {
         </text>
       </div>
       <div style={{ marginBottom: mediumScreen ? 0 : 50 }}>
-        <img src={'/images/Mask_Group_16.png'} />
+        <img
+          src={'/images/Mask_Group_16.png'}
+          style={{
+            objectFit: 'cover',
+            width: mediumScreen ? '100%' : 300,
+            height: mediumScreen ? '100%' : 300,
+          }}
+        />
       </div>
     </div>
   );

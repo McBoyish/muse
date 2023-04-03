@@ -89,8 +89,8 @@ export default function Home() {
           style={{
             display: 'flex',
             flexDirection: mediumScreen ? 'row' : 'column',
-            paddingLeft: 100,
-            paddingRight: 100,
+            paddingLeft: mediumScreen ? 100 : 25,
+            paddingRight: mediumScreen ? 100 : 25,
             paddingTop: 50,
             paddingBottom: 50,
             textAlign: mediumScreen ? 'left' : 'center',
@@ -314,12 +314,25 @@ export default function Home() {
             paddingBottom: mediumScreen ? 0 : 50,
             paddingLeft: 50,
             paddingRight: 50,
+            textAlign: mediumScreen ? 'left' : 'center',
           }}
         >
-          <text style={{ fontSize: 13, fontFamily: 'Poppins', color: 'white' }}>
+          <text
+            style={{
+              fontSize: 13,
+              fontFamily: 'Poppins',
+              color: 'white',
+              marginTop: mediumScreen ? 0 : 25,
+            }}
+          >
             © 2023. Muse Barbershop. All Rights Reserved.
           </text>
-          <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+            }}
+          >
             <text
               style={{ fontSize: 13, fontFamily: 'Poppins', color: '#AF0202' }}
             >

@@ -19,9 +19,12 @@ export default function Contact() {
           boxShadow:
             '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
           justifyContent: 'space-between',
+          marginLeft: mediumScreen ? 50 : 0,
+          marginRight: mediumScreen ? 50 : 0,
+          marginBottom: mediumScreen ? 50 : 0,
           marginTop: 50,
-          margin: 50,
           padding: 20,
+          alignItems: mediumScreen ? 'flex-start' : 'center',
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', padding: 40 }}>
@@ -96,7 +99,7 @@ export default function Contact() {
                 type='text'
                 placeholder='Name'
                 style={{
-                  width: mediumScreen ? 195 : 250,
+                  width: mediumScreen ? 195 : 200,
                   height: 20,
                   backgroundColor: '#EAE9E7',
                   borderRadius: 5,
@@ -111,7 +114,7 @@ export default function Contact() {
                 type='email'
                 placeholder='Email address'
                 style={{
-                  width: mediumScreen ? 195 : 250,
+                  width: mediumScreen ? 195 : 200,
                   height: 20,
                   backgroundColor: '#EAE9E7',
                   borderRadius: 5,
@@ -127,7 +130,7 @@ export default function Contact() {
               placeholder='Write your message here'
               rows={4}
               style={{
-                width: mediumScreen ? 420 : 250,
+                width: mediumScreen ? 420 : 200,
                 backgroundColor: '#EAE9E7',
                 borderRadius: 5,
                 padding: 10,
@@ -140,7 +143,7 @@ export default function Contact() {
           </div>
           <button
             style={{
-              width: mediumScreen ? 235 : 270,
+              width: mediumScreen ? 235 : 220,
               height: 50,
               borderRadius: 24,
               backgroundColor: '#AF0202',
@@ -154,9 +157,15 @@ export default function Contact() {
             Send
           </button>
         </div>
-        <img src='/images/Mask_Group_14.png' style={{ overflow: 'hidden' }} />
+        <img
+          src='/images/Mask_Group_14.png'
+          style={{
+            objectFit: 'cover',
+            width: mediumScreen ? '100%' : 300,
+            height: mediumScreen ? '100%' : 300,
+          }}
+        />
       </div>
-
       <div
         style={{
           display: 'flex',
