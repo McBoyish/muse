@@ -1,16 +1,24 @@
+import { useState, useEffect } from 'react';
 import Logo from './Logo';
 import useBreakPoints from './utils/responsive';
 
 export default function Banner2() {
   const { isMediumScreen } = useBreakPoints();
+
+  const [mediumScreen, setMediumScreen] = useState(false);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  }, [isMediumScreen]);
+
   return (
     <div
       style={{
-        flexDirection: isMediumScreen ? 'row' : 'column-reverse',
+        flexDirection: mediumScreen ? 'row' : 'column-reverse',
         justifyContent: 'space-evenly',
         display: 'flex',
         alignItems: 'center',
-        margin: isMediumScreen ? 50 : 25,
+        margin: mediumScreen ? 50 : 25,
         marginTop: 50,
         marginBottom: 50,
       }}
@@ -18,8 +26,8 @@ export default function Banner2() {
       <div
         style={{
           maxWidth: 750,
-          textAlign: isMediumScreen ? 'left' : 'center',
-          marginTop: isMediumScreen ? 0 : 50,
+          textAlign: mediumScreen ? 'left' : 'center',
+          marginTop: mediumScreen ? 0 : 50,
         }}
       >
         <text
@@ -33,7 +41,7 @@ export default function Banner2() {
           personalized experience for every customer
         </text>
       </div>
-      <div style={{ marginTop: isMediumScreen ? 0 : 50 }}>
+      <div style={{ marginTop: mediumScreen ? 0 : 50 }}>
         <Logo />
       </div>
     </div>

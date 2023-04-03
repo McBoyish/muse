@@ -1,13 +1,21 @@
+import { useState, useEffect } from 'react';
 import useBreakPoints from './utils/responsive';
 
 export default function Careers() {
   const { isMediumScreen } = useBreakPoints();
+
+  const [mediumScreen, setMediumScreen] = useState(false);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  }, [isMediumScreen]);
+
   return (
     <div
       id='careers'
       style={{
         display: 'flex',
-        flexDirection: isMediumScreen ? 'row' : 'column-reverse',
+        flexDirection: mediumScreen ? 'row' : 'column-reverse',
         justifyContent: 'space-evenly',
         backgroundColor: '#EAE9E7',
         alignItems: 'center',
@@ -20,8 +28,8 @@ export default function Careers() {
           flexDirection: 'column',
           width: 500,
           paddingRight: 25,
-          textAlign: isMediumScreen ? 'left' : 'center',
-          alignItems: isMediumScreen ? 'flex-start' : 'center',
+          textAlign: mediumScreen ? 'left' : 'center',
+          alignItems: mediumScreen ? 'flex-start' : 'center',
         }}
       >
         <text
@@ -62,7 +70,7 @@ export default function Careers() {
           Send
         </button>
       </div>
-      <div style={{ marginBottom: isMediumScreen ? 0 : 50 }}>
+      <div style={{ marginBottom: mediumScreen ? 0 : 50 }}>
         <img src={'/images/Mask_Group_20.png'} />
       </div>
     </div>

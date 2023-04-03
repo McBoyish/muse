@@ -1,12 +1,20 @@
+import { useState, useEffect } from 'react';
 import useBreakPoints from './utils/responsive';
 
 export default function About() {
   const { isMediumScreen } = useBreakPoints();
+
+  const [mediumScreen, setMediumScreen] = useState(false);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  }, [isMediumScreen]);
+
   return (
     <div
       style={{
         display: 'flex',
-        flexDirection: isMediumScreen ? 'row' : 'column-reverse',
+        flexDirection: mediumScreen ? 'row' : 'column-reverse',
         justifyContent: 'space-evenly',
         backgroundColor: '#EAE9E7',
         alignItems: 'center',
@@ -18,9 +26,9 @@ export default function About() {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          width: isMediumScreen ? 500 : '90%',
+          width: mediumScreen ? 500 : '90%',
           paddingRight: 25,
-          textAlign: isMediumScreen ? 'left' : 'center',
+          textAlign: mediumScreen ? 'left' : 'center',
         }}
       >
         <text
@@ -43,7 +51,7 @@ export default function About() {
           best.
         </text>
       </div>
-      <div style={{ marginBottom: isMediumScreen ? 0 : 50 }}>
+      <div style={{ marginBottom: mediumScreen ? 0 : 50 }}>
         <img src={'/images/Mask_Group_16.png'} />
       </div>
     </div>

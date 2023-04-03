@@ -1,4 +1,5 @@
 import styles from '@/styles/navbar.module.css';
+import { useState, useEffect } from 'react';
 import NavbarMenu from './NavbarMenuLogo';
 import useBreakPoints from './utils/responsive';
 
@@ -8,9 +9,16 @@ interface NavbarProps {
 
 export default function Navbar({ openMenu }: NavbarProps) {
   const { isMediumScreen } = useBreakPoints();
+
+  const [mediumScreen, setMediumScreen] = useState(false);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  }, [isMediumScreen]);
+
   return (
     <div className={styles['nav-container']}>
-      {isMediumScreen && (
+      {mediumScreen && (
         <div className={styles['nav-left']}>
           <a href='#about' className={styles['nav-left-anchor']}>
             ABOUT
@@ -99,7 +107,7 @@ export default function Navbar({ openMenu }: NavbarProps) {
         </svg>
       </div>
 
-      {isMediumScreen && (
+      {mediumScreen && (
         <div className={styles['nav-right']}>
           <div className={styles['nav-right-book-now-container']}>
             <a href='#' className={styles['nav-right-book-now']}>
@@ -109,7 +117,7 @@ export default function Navbar({ openMenu }: NavbarProps) {
         </div>
       )}
 
-      {!isMediumScreen && (
+      {!mediumScreen && (
         <div onClick={openMenu}>
           <NavbarMenu />
         </div>

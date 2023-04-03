@@ -14,11 +14,17 @@ import SpinningLogo from '@/src/SpinningLogo';
 import InstaLogo from '@/src/InstaLogo';
 import TiktokLogo from '@/src/TiktokLogo';
 import NavbarMenu from '@/src/NavbarMenu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   const { isMediumScreen } = useBreakPoints();
   const [visible, setVisible] = useState(false);
+  const [mediumScreen, setMediumScreen] = useState(false);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  }, [isMediumScreen]);
+
   return (
     <>
       <Head>
@@ -49,8 +55,8 @@ export default function Home() {
             fontSize: 18,
             alignSelf: 'center',
             marginTop: 50,
-            maxWidth: isMediumScreen ? 1440 : 300,
-            textAlign: isMediumScreen ? 'left' : 'center',
+            maxWidth: mediumScreen ? 1440 : 300,
+            textAlign: mediumScreen ? 'left' : 'center',
           }}
         >
           Notes about the services provided by Muse Barbershop
@@ -82,13 +88,13 @@ export default function Home() {
         <div
           style={{
             display: 'flex',
-            flexDirection: isMediumScreen ? 'row' : 'column',
+            flexDirection: mediumScreen ? 'row' : 'column',
             paddingLeft: 100,
             paddingRight: 100,
             paddingTop: 50,
             paddingBottom: 50,
-            textAlign: isMediumScreen ? 'left' : 'center',
-            justifyContent: isMediumScreen ? 'space-between' : 'flex-start',
+            textAlign: mediumScreen ? 'left' : 'center',
+            justifyContent: mediumScreen ? 'space-between' : 'flex-start',
           }}
         >
           <div
@@ -96,8 +102,8 @@ export default function Home() {
               display: 'flex',
               flexDirection: 'column',
               width: 300,
-              alignItems: isMediumScreen ? 'flex-start' : 'center',
-              alignSelf: isMediumScreen ? 'flex-start' : 'center',
+              alignItems: mediumScreen ? 'flex-start' : 'center',
+              alignSelf: mediumScreen ? 'flex-start' : 'center',
             }}
           >
             <div
@@ -105,7 +111,7 @@ export default function Home() {
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                alignSelf: isMediumScreen ? 'flex-start' : 'center',
+                alignSelf: mediumScreen ? 'flex-start' : 'center',
               }}
             >
               <SpinningLogo />
@@ -147,7 +153,7 @@ export default function Home() {
                   display: 'flex',
                   flexDirection: 'row',
                   marginTop: 10,
-                  alignSelf: isMediumScreen ? 'flex-start' : 'center',
+                  alignSelf: mediumScreen ? 'flex-start' : 'center',
                 }}
               >
                 <div>
@@ -163,14 +169,14 @@ export default function Home() {
           <div
             style={{
               display: 'flex',
-              flexDirection: isMediumScreen ? 'row' : 'column',
+              flexDirection: mediumScreen ? 'row' : 'column',
             }}
           >
             <div
               style={{
                 flexDirection: 'column',
                 display: 'flex',
-                marginTop: isMediumScreen ? 0 : 50,
+                marginTop: mediumScreen ? 0 : 50,
                 alignSelf: 'flex-start',
               }}
             >
@@ -243,9 +249,9 @@ export default function Home() {
               style={{
                 flexDirection: 'column',
                 display: 'flex',
-                marginTop: isMediumScreen ? 0 : 50,
+                marginTop: mediumScreen ? 0 : 50,
                 alignSelf: 'flex-start',
-                marginLeft: isMediumScreen ? 50 : 0,
+                marginLeft: mediumScreen ? 50 : 0,
               }}
             >
               <text
@@ -301,10 +307,10 @@ export default function Home() {
             backgroundColor: 'black',
             height: 80,
             display: 'flex',
-            flexDirection: isMediumScreen ? 'row' : 'column-reverse',
+            flexDirection: mediumScreen ? 'row' : 'column-reverse',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: isMediumScreen ? 0 : 50,
+            padding: mediumScreen ? 0 : 50,
             paddingLeft: 50,
             paddingRight: 50,
           }}

@@ -1,8 +1,15 @@
-import styles from '@/styles/banner1.module.css';
+import { useState, useEffect } from 'react';
 import useBreakPoints from './utils/responsive';
 
 export default function Banner1() {
   const { isMediumScreen } = useBreakPoints();
+
+  const [mediumScreen, setMediumScreen] = useState(false);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  }, [isMediumScreen]);
+
   return (
     <div
       style={{
@@ -24,11 +31,11 @@ export default function Banner1() {
       <div
         style={{
           position: 'absolute',
-          left: isMediumScreen ? 100 : undefined,
-          top: isMediumScreen ? '10%' : 50,
-          width: isMediumScreen ? 665 : 320,
-          textAlign: isMediumScreen ? 'left' : 'center',
-          alignItems: isMediumScreen ? 'flex-start' : 'center',
+          left: mediumScreen ? 100 : undefined,
+          top: mediumScreen ? '10%' : 50,
+          width: mediumScreen ? 665 : 320,
+          textAlign: mediumScreen ? 'left' : 'center',
+          alignItems: mediumScreen ? 'flex-start' : 'center',
           display: 'flex',
           flexDirection: 'column',
         }}
@@ -37,7 +44,7 @@ export default function Banner1() {
           style={{
             fontSize: 68,
             color: 'white',
-            width: isMediumScreen ? 665 : 350,
+            width: mediumScreen ? 665 : 350,
           }}
         >
           Experience the Art of grooming at Muse Barbershop

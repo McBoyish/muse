@@ -1,6 +1,7 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import useBreakPoints from '@/src/utils/responsive';
+import { useEffect, useState } from 'react';
 
 export default function Slideshow() {
   const images = [
@@ -13,17 +14,28 @@ export default function Slideshow() {
 
   const { isLargeScreen, isMediumScreen } = useBreakPoints();
 
+  const [mediumScreen, setMediumScreen] = useState(false);
+  const [largeScreen, setLargeScreen] = useState(false);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  }, [isMediumScreen]);
+
+  useEffect(() => {
+    setLargeScreen(isLargeScreen);
+  }, [isLargeScreen]);
+
   return (
     <div
       style={{
-        width: isLargeScreen ? 1000 : isMediumScreen ? 700 : 500,
+        width: largeScreen ? 1000 : mediumScreen ? 700 : 500,
         alignSelf: 'center',
         marginTop: 100,
       }}
     >
       <Carousel
         centerMode={true}
-        centerSlidePercentage={isLargeScreen ? 50 : isMediumScreen ? 75 : 95}
+        centerSlidePercentage={largeScreen ? 50 : mediumScreen ? 75 : 95}
         showStatus={false}
         showThumbs={false}
         showArrows={true}

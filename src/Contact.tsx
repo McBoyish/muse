@@ -1,14 +1,21 @@
+import { useEffect, useState } from 'react';
 import useBreakPoints from './utils/responsive';
 
 export default function Contact() {
   const { isMediumScreen } = useBreakPoints();
+  const [mediumScreen, setMediumScreen] = useState(true);
+
+  useEffect(() => {
+    setMediumScreen(isMediumScreen);
+  });
+
   return (
     <>
       <div
         id={'contact'}
         style={{
           display: 'flex',
-          flexDirection: isMediumScreen ? 'row' : 'column-reverse',
+          flexDirection: mediumScreen ? 'row' : 'column-reverse',
           boxShadow:
             '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
           justifyContent: 'space-between',
@@ -18,7 +25,7 @@ export default function Contact() {
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', padding: 40 }}>
-          {isMediumScreen && (
+          {mediumScreen && (
             <text
               style={{
                 fontSize: 32,
@@ -30,7 +37,7 @@ export default function Contact() {
               We are hiring!
             </text>
           )}
-          {isMediumScreen && (
+          {mediumScreen && (
             <text
               style={{
                 fontSize: 32,
@@ -82,14 +89,14 @@ export default function Contact() {
             <div
               style={{
                 display: 'flex',
-                flexDirection: isMediumScreen ? 'row' : 'column',
+                flexDirection: mediumScreen ? 'row' : 'column',
               }}
             >
               <input
                 type='text'
                 placeholder='Name'
                 style={{
-                  width: isMediumScreen ? 195 : 250,
+                  width: mediumScreen ? 195 : 250,
                   height: 20,
                   backgroundColor: '#EAE9E7',
                   borderRadius: 5,
@@ -104,7 +111,7 @@ export default function Contact() {
                 type='email'
                 placeholder='Email address'
                 style={{
-                  width: isMediumScreen ? 195 : 250,
+                  width: mediumScreen ? 195 : 250,
                   height: 20,
                   backgroundColor: '#EAE9E7',
                   borderRadius: 5,
@@ -112,7 +119,7 @@ export default function Contact() {
                   borderWidth: 0,
                   fontSize: 16,
                   fontFamily: 'Poppins',
-                  marginTop: isMediumScreen ? 0 : 15,
+                  marginTop: mediumScreen ? 0 : 15,
                 }}
               />
             </div>
@@ -120,7 +127,7 @@ export default function Contact() {
               placeholder='Write your message here'
               rows={4}
               style={{
-                width: isMediumScreen ? 420 : 250,
+                width: mediumScreen ? 420 : 250,
                 backgroundColor: '#EAE9E7',
                 borderRadius: 5,
                 padding: 10,
@@ -133,7 +140,7 @@ export default function Contact() {
           </div>
           <button
             style={{
-              width: isMediumScreen ? 235 : 270,
+              width: mediumScreen ? 235 : 270,
               height: 50,
               borderRadius: 24,
               backgroundColor: '#AF0202',
@@ -157,7 +164,7 @@ export default function Contact() {
           marginTop: 75,
           width: '75%',
           alignSelf: 'center',
-          alignItems: isMediumScreen ? undefined : 'center',
+          alignItems: mediumScreen ? undefined : 'center',
           marginBottom: 75,
         }}
       >
@@ -175,7 +182,7 @@ export default function Contact() {
         <div
           style={{
             display: 'flex',
-            flexDirection: isMediumScreen ? 'row' : 'column',
+            flexDirection: mediumScreen ? 'row' : 'column',
             justifyContent: 'center',
             marginTop: 30,
             alignItems: 'center',
@@ -191,7 +198,7 @@ export default function Contact() {
           >
             Tuesday - Wenesday
           </text>
-          {isMediumScreen && (
+          {mediumScreen && (
             <text>
               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
             </text>
@@ -210,7 +217,7 @@ export default function Contact() {
         <div
           style={{
             display: 'flex',
-            flexDirection: isMediumScreen ? 'row' : 'column',
+            flexDirection: mediumScreen ? 'row' : 'column',
             justifyContent: 'center',
             marginTop: 10,
             alignItems: 'center',
@@ -225,7 +232,7 @@ export default function Contact() {
           >
             Thursday - Friday
           </text>
-          {isMediumScreen && (
+          {mediumScreen && (
             <text>
               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
               .
@@ -245,7 +252,7 @@ export default function Contact() {
         <div
           style={{
             display: 'flex',
-            flexDirection: isMediumScreen ? 'row' : 'column',
+            flexDirection: mediumScreen ? 'row' : 'column',
             justifyContent: 'center',
             marginTop: 10,
             alignItems: 'center',
@@ -260,7 +267,7 @@ export default function Contact() {
           >
             Saturday
           </text>
-          {isMediumScreen && (
+          {mediumScreen && (
             <text>
               . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
               . . . . . . . . .
